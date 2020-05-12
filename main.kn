@@ -1,0 +1,14 @@
+var wndMain: wnd@Wnd
+var drawMain: wnd@Draw
++var font: draw@Font
++const WIDTH: float :: 1600.0
++const HEIGHT: float :: 900.0
+func main()
+	do @wndMain :: wnd@makeWnd(null, %aspect, @WIDTH $ int, @HEIGHT $ int, "GA")
+	do @drawMain :: wnd@makeDraw(@wndMain, 0, 0, @WIDTH $ int, @HEIGHT $ int, %scale, %scale, false)
+	do @font :: draw@makeFont(null, 15, false, false, true, 0.0)
+	var ga: \ga@GA :: #\ga@GA
+	var ga2: \ga2@GA :: #\ga2@GA
+	;do ga.mainloop()
+	do ga2.mainloop()
+end func
